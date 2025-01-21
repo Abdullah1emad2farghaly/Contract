@@ -13,13 +13,17 @@
             background-color: #f0f0f0;
         }
         .document {
-            padding: 60px 80px 0 0;
+            padding-top: 60px;
             line-height: 1.6;
             font-weight: 600;
             min-height: 527px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: auto;
             direction: rtl;
+            border: none;
+
+        }
+        .document:focus {
+            outline: none !important;
+            border: none !important;
         }
         .document p:nth-child(1) {
             align-items: center;
@@ -59,10 +63,10 @@
             width: 130px;
             height: 130px;
             top: 0;
-            left: 8%;
             background-color: #207bb0;
             
         }
+        
         .titleCompany .logo div {
             position: absolute;
             display: flex;
@@ -96,6 +100,7 @@
             bottom: -13px;
             right: 6.9px;
             transform: rotate(-20deg);
+            z-index: -1;
         }
         .titleCompany .logo::before {
             content: "";
@@ -106,6 +111,7 @@
             bottom: -13px;
             left: 6.5px;
             transform: rotate(20deg);
+            z-index: -1;
         }
         .nameCompany {
             font-size: 30px;
@@ -145,7 +151,28 @@
         }
         footer span {
             font: 18px;
-            margin-left: 15px;
+            margin-left: 5px;
+        }
+        @media (max-width: 500px) {
+            .titleCompany .logo {
+                width: 80px;
+                height: 80px;
+                top: 0;
+                
+            }
+            .nameCompany {
+                font-size: 18px;
+            }
+            .nameContract {
+                font-size: 15px;
+            }
+            footer .location {
+                margin-left: 30px;
+            }
+            footer .location,
+            footer .Phone {
+                font-size: 16px !important;
+            }
         }
     </style>
     <link rel="stylesheet" href="./bootstrap.min.css">
@@ -155,25 +182,22 @@
     
 
     <div class="titleCompany">
-        <div class="logo">
-            <div>
-                <img src="./job one/logo-removebg-preview.png" width="90%" alt="">
+        <div class="container">
+            <div class="logo col-3">
+                <div class="col-12">
+                    <img src="./job one/logo-removebg-preview.png" width="90%" alt="">
+                </div>
             </div>
+            <div class="nameCompany">Home Cares</div>
+            <div class="nameContract" contenteditable="true">عقد إستيراد سيارات من الخارج</div>
         </div>
-        <div class="nameCompany">Home Cares</div>
-        <div class="nameContract" contenteditable="true">عقد إستيراد سيارات من الخارج</div>
     </div>
 
-    <div class="document" contenteditable="true">
-        <p>إنه في يوم الأحد الموافق 2024/12/15 قد تم الاتفاق بين كلا من السادة</p>
-        <p>شركة السيارة الذهبية لاستيراد السيارات ويمثلها في هذا العقد مدير شركة</p>
-        <pre>السيد مصطفى محمد مرتضی رقم قومي : 291102024412932 (مصري الجنسية)                طرف أول</pre>
-        <p>والمقيم في عمل السويسري الحي العاشر مدينة نصر - القاهرة</p>
-        <pre>السيد أحمد قطب احمد قطب المزين   رقم قومی: 29105011803836   (مصرى الجنسية)    طرف ثانى</pre>
-        <pre>والمقيم في لكلا العلب مركز ايتاي البارود البحيرة         موبايل 01141121568</pre>
-        <pre>حيث تعمل الشركة في تجارة السيارات و الوسطاء في استيراد السيارات</pre>
-        <pre> بند (1) يقوم الطرف الأول باستيراد سيارة بنظام مباشرة المصريين المقيمين بالخارج من دولة كوريا الجنوبية) <span>.</span></pre>
-        <pre></pre>
+    <div class="container">
+        <div class="document" contenteditable="true">
+            <p>إنه في يوم الأحد الموافق 2024/12/15 قد تم الاتفاق بين كلا من السادة</p>
+            
+        </div>
     </div>
     <div class="aboveFoot"></div>
     <footer>
